@@ -1,0 +1,22 @@
+{{ define "orderItems" }}
+<div>
+  <table border="0">
+    <thead>
+      <tr >
+        <th class="td" scope="col">Product</th>
+        <th class="td" scope="col">Quantity</th>
+        <th class="td" scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{range $idx, $item := .Items}}
+      <tr>
+        <td class="td" scope="col">{{$item.Name}}</td>
+        <td class="td" scope="col">{{$item.Quantity}}</td>
+        <td class="td" scope="col">{{$item.Total}} INR</td>
+      </tr>
+      {{end}}
+    </tbody>
+  </table>
+</div>
+{{ end }}

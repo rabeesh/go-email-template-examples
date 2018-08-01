@@ -1,0 +1,13 @@
+{{ define "content" }}
+<p>Dear <strong>{{ .Billing.Firstname }} {{ .Billing.LastName }}</strong>,</p>
+
+<p>
+  Thank you for your order - this is your order confirmation.
+  <br />
+  Order date	{{ .Date.Format "Jan_2 Mon 2006 15:04:05" }}
+  <br />
+  Order	{{ .Number }}
+</p>
+
+{{ template "orderItems" . }}
+{{ end }}

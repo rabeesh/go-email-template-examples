@@ -1,0 +1,7 @@
+{{ define "content" }}
+<p>
+    You have received an order from {{ .Billing.Firstname }} {{ .Billing.LastName }}.
+    The order is as follows
+</p>
+{{ template "orderItems" . }}
+{{ end }}
